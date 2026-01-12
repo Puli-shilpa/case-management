@@ -119,7 +119,7 @@ public class CommunityHallBookingServiceImpl implements CommunityHallBookingServ
 		enrichmentService.enrichCreateBookingRequest(communityHallsBookingRequest);
 		
 		//ENcrypt PII data of applicant
-		encryptionService.encryptObject(communityHallsBookingRequest);
+		//encryptionService.encryptObject(communityHallsBookingRequest);
 
 		/**
 		 * Workflow will come into picture once hall location changes or booking is
