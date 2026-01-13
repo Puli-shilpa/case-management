@@ -53,6 +53,7 @@ public class EnrichmentService {
 		AuditDetails auditDetails = caseUtil.getAuditDetails(requestInfo.getUserInfo().getUuid().toString(), false);
 		cases.getAdvocates().forEach(advocate -> advocate.setAdvocateId(UUID.randomUUID().toString()));
 
+		if(caseRequest.getCases().getWorkflow().getAction().equalsIgnoreCase("ALLOCATE_ADVICATE"))
 		cases.getJudgement().setJudgementId(UUID.randomUUID().toString());
 
 		cases.setAuditDetails(auditDetails);
