@@ -167,7 +167,7 @@ public class CommunityHallBookingServiceImpl implements CommunityHallBookingServ
 			CommunityHallBookingRequest bookingRequest = CommunityHallBookingRequest.builder()
 					.hallsBookingApplication(communityHallBookingDetail).requestInfo(info).build();
 
-			communityHallBookingDetail = encryptionService.encryptObject(bookingRequest);
+			//communityHallBookingDetail = encryptionService.encryptObject(bookingRequest);
 
 			bookingSearchCriteria
 					.setMobileNumber(communityHallBookingDetail.getApplicantDetail().getApplicantMobileNo());
