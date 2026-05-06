@@ -58,6 +58,8 @@ public class BookingSlotDetailRowmapper implements ResultSetExtractor<List<Booki
 					.bookingDate(CommunityHallBookingUtil.parseStringToLocalDate(rs.getString("booking_date")))
 					.bookingFromTime(LocalTime.parse(rs.getString("booking_from_time")))
 					.bookingToTime(LocalTime.parse(rs.getString("booking_to_time")))
+					.floorCode(rs.getString("floor_code"))        
+					.floorName(rs.getString("floor_name"))
 					.status(rs.getString("status"))
 					.capacity(rs.getString("capacity"))
 					.auditDetails(CommunityHallBookingUtil.getAuditDetails(rs)).build();
